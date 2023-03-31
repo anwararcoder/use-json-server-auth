@@ -101,14 +101,14 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-
-    AuthService.login(email, password)
-      .then(() => {
-        window.location.reload();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      AuthService.login(email, password)
+     .then((data) => {
+      return data;
+     })
+     .catch((error) => {
+       return error;
+     });
+   };
   };
 
   return (
