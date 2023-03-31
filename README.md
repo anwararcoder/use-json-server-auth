@@ -192,13 +192,12 @@ function Register() {
 
   const handleRegister = (e) => {
     e.preventDefault();
-
-    AuthService.register(name, email, password)
-      .then(() => {
-        window.location.reload();
+      AuthService.register(name, email, password)
+      .then((data) => {
+        return data;
       })
       .catch((error) => {
-        console.log(error);
+        return error;
       });
   };
 
